@@ -10,11 +10,14 @@ class App extends React.Component {
     super(props);
     this.state = {
       letters: alphabet,
-      phrase: randomPhrase()
+      phrase: randomPhrase(),
+      buttonRestartVisible: false
     };
     this.computeDisplay = this.computeDisplay.bind(this);
     this.clicOnLetter = this.clicOnLetter.bind(this);
     this.restart = this.restart.bind(this);
+    this.checkVictory = this.checkVictory.bind(this);
+    this.buttonRestartIsVisible = this.buttonRestartIsVisible.bind(this);
   }
 
   clicOnLetter(letter) {
@@ -23,18 +26,26 @@ class App extends React.Component {
     upToDateAlphabet[index].isUsed = true;
     //on execute la fonction qui verifie la presence d'underscore APRES le setState
     this.setState({ letters: upToDateAlphabet }, () => {
-      !document.querySelector('.guesseZone').innerHTML.includes('_')
-        ? console.log('winn')
-        : console.log('loose');
+      this.checkVictory();
     });
   }
 
+  checkVictory() {
+    !document.querySelector('.guesseZone').innerHTML.includes('_')
+      ? this.buttonRestartIsVisible()
+      : console.log('loose');
+  }
+
+  buttonRestartIsVisible() {
+    this.setState({ buttonRestartVisible: true });
+  }
   restart() {
     alphabet.forEach(element =>
       element.isUsed === true ? (element.isUsed = false) : ' '
     );
     this.setState({ letter: alphabet });
     this.setState({ phrase: randomPhrase() });
+    this.setState({ buttonRestartVisible: false });
   }
 
   computeDisplay() {
@@ -62,7 +73,10 @@ class App extends React.Component {
             />
           ))}
         </div>
-        <ButtonRestart onClick={this.restart} />
+        <ButtonRestart
+          onClick={this.restart}
+          isVisible={this.state.buttonRestartVisible}
+        />
       </div>
     );
   }

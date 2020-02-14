@@ -1,8 +1,9 @@
 import React from 'react';
 
-function ButtonRestart({ onClick }) {
+function ButtonRestart({ onClick, isVisible }) {
   return (
     <button
+      className={`buttonRestart ${isVisible ? 'isVisible' : ''}`}
       onClick={() => {
         onClick();
       }}
