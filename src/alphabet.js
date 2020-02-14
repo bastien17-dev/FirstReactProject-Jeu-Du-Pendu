@@ -1,0 +1,30 @@
+const alphabet = [
+  { isUsed: false, value: 'A' },
+  { isUsed: false, value: 'B' },
+  { isUsed: false, value: 'C' },
+  { isUsed: false, value: 'D' },
+  { isUsed: false, value: 'E' },
+  { isUsed: false, value: 'F' },
+  { isUsed: false, value: 'G' },
+  { isUsed: false, value: 'H' },
+  { isUsed: false, value: 'I' },
+  { isUsed: false, value: 'J' },
+  { isUsed: false, value: 'K' },
+  { isUsed: false, value: 'L' },
+  { isUsed: false, value: 'M' },
+  { isUsed: false, value: 'N' },
+  { isUsed: false, value: 'O' },
+  { isUsed: false, value: 'P' },
+  { isUsed: false, value: 'Q' },
+  { isUsed: false, value: 'R' },
+  { isUsed: false, value: 'S' },
+  { isUsed: false, value: 'T' },
+  { isUsed: false, value: 'U' },
+  { isUsed: false, value: 'V' },
+  { isUsed: false, value: 'W' },
+  { isUsed: false, value: 'X' },
+  { isUsed: false, value: 'Y' },
+  { isUsed: false, value: 'Z' }
+];
+
+export default alphabet;

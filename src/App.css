@@ -1,38 +1,32 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.gameArea {
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
+.guesseZone {
+  letter-spacing: 2em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.choiceLetter {
+  display: grid;
+  grid-template-columns: repeat(13, 40px);
+  grid-template-rows: repeat(2, 30px);
+  grid-gap: 5px;
+}
+
+.letterTouch {
+  border: 1px solid black;
+  place-self: center;
+  padding: 5px;
+}
+
+.letterTouch:hover {
+  cursor: pointer;
+}
+
+.gray {
+  background-color: gray;
 }
