@@ -1,5 +1,3 @@
-import React from 'react';
-
 const phrases = [
   'VOITURE',
   'MAISON',
@@ -8,7 +6,14 @@ const phrases = [
   'PLACARD',
   'TABOURET',
   'HYPOCONDRIAQUE',
-  'ORNITORYNQUE'
+  'ORNITORYNQUE',
+  'PISCINE',
+  'SURF',
+  'COMBINAISON',
+  'FOOTBALL',
+  'NATATION',
+  'IMMEUBLE',
+  'RESTAURANT'
 ];
 
 function randomPhrase() {
